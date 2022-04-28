@@ -1,3 +1,6 @@
+from tkinter import E
+
+
 email = "jose@gmail.com"
 
 # pontos:       6          5            4      3       2      diferença tempo (+recente = +pontos)
@@ -73,7 +76,18 @@ for empresa in empresas:
                 pontosEmpresa[empresa] += pts
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)           
 else:
+    
     print(pontosEmpresa)
+    ordenado = sorted(pontosEmpresa.values(), reverse=True)
+    print(ordenado)
+    
+    for pontos in ordenado:
+        for empresa in pontosEmpresa:
+            if pontos == pontosEmpresa[empresa]:
+                print(empresa)
+    
+    
+
 
 # 2  10
 # 3  9
