@@ -24,58 +24,59 @@ for empresa in empresas:
     pontosEmpresa[empresa] = 0
 
     for i in range(len(empresas[empresa])):  # percorre a list de cada empresa
-        match empresas[empresa][i]:
-            case "senha":
-                pontosEmpresa[empresa] += 60
-            case "tel":
-                pontosEmpresa[empresa] += 40
-            case "nome":
-                pontosEmpresa[empresa] += 30
-            case "email":
-                pontosEmpresa[empresa] += 20
+        if empresas[empresa][i] == "senha":
+            pontosEmpresa[empresa] += 60
+        
+        if empresas[empresa][i] == "tel":
+            pontosEmpresa[empresa] += 40
+
+        if empresas[empresa][i] == "nome":
+            pontosEmpresa[empresa] += 30
+
+        if empresas[empresa][i] == "email":
+            pontosEmpresa[empresa] += 60 
     else:
         diff = anoAtual - int(empresas[empresa][i][3:7])
         decimal = int(empresas[empresa][i][0:2]) / 100
 
-        match diff:
-            case 1:
+        if diff == 1:
                 pts = 10 + decimal
                 pontosEmpresa[empresa] += pts
                 round(pontosEmpresa[empresa], 2)
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
-            case 2:
+        elif diff == 2:
                 pts = 9 + decimal
                 pontosEmpresa[empresa] += pts
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
-            case 3:
+        elif diff== 3:
                 pts = 8 + decimal
                 pontosEmpresa[empresa] += pts
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
-            case 4:
+        elif diff == 4:
                 pts = 7 + decimal
                 pontosEmpresa[empresa] += pts
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
-            case 5:
+        elif diff == 5:
                 pts = 6 + decimal
                 pontosEmpresa[empresa] += pts
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
-            case 6:
+        elif diff == 6:
                 pts = 5 + decimal
                 pontosEmpresa[empresa] += pts
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
-            case 7:
+        elif diff == 7:
                 pts = 4 + decimal
                 pontosEmpresa[empresa] += pts
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
-            case 8:
+        elif diff == 8:
                 pts = 3 + decimal
                 pontosEmpresa[empresa] += pts
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
-            case 9:
+        elif diff == 9:
                 pts = 2 + decimal
                 pontosEmpresa[empresa] += pts
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
-            case 10:
+        elif diff == 10:
                 pts = 1 + decimal
                 pontosEmpresa[empresa] += pts
                 pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
