@@ -34,7 +34,7 @@ for empresa in empresas:
             pontosEmpresa[empresa] += 30
 
         if empresas[empresa][i] == "email":
-            pontosEmpresa[empresa] += 60 
+            pontosEmpresa[empresa] += 20 
     else:
         diff = anoAtual - int(empresas[empresa][i][3:7])
         decimal = int(empresas[empresa][i][0:2]) / 100
