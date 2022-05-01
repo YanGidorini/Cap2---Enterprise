@@ -95,7 +95,7 @@ else:
 
     ordenado = sorted(pontosEmpresa.values(), reverse=True)
 
-    print("A ordem da lista ordenada agora é: ")
+    print("A ordem da lista é: ")
     for pontos in ordenado:
         for empresa in pontosEmpresa:
             if pontos == pontosEmpresa[empresa]:
