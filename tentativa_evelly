@@ -1,6 +1,4 @@
-from tkinter import E
-
-# email = "jose@gmail.com"
+#alunos: YAN-RM96190 VICTOR-RM  EVELLY-RM96090 CHRISTOPHER-RM95083
 
 # pontos:       6          5            4      3       2      diferença tempo (+recente = +pontos)
 # prioridade: senha > ajuda de senha > tel > nomes > email > data (mais recente para o mais antigo)
@@ -95,9 +93,7 @@ for empresa in empresas:
             pontosEmpresa[empresa] = round(pontosEmpresa[empresa], 2)
 else:
 
-    print(pontosEmpresa)  # vendo quantos pontos cada empresa tem
     ordenado = sorted(pontosEmpresa.values(), reverse=True)
-    print(ordenado)  # ordenando de forma decrescente
 
     print("A ordem da lista ordenada agora é: ")
     for pontos in ordenado:
@@ -117,31 +113,4 @@ else:
                         case "email":
                             print("E-mail.")
 
-# 2  10
-# 3  9
-# 4  8
-# 5  7
-# 6  6
-# 7  5
-# 8  4
-# 9  3
-# 10 2
 
-# pontosEmpresa = {
-#     "000webhost": 0,
-#     "123RF": 0,
-#     "500px": 0,
-#     "8fit": 0,
-#     "8tracks": 0
-# }
-
-''' 
-como precisa ficar
-organizado = {
-    "123RF": ["senha", "tel", "nome", "email", "03/2020"] 24.03pts +,
-    "8fit": ["senha", "nome", "email", "07/2018"] 18.07pts +,
-    "500px": ["senha", "nome", "email", "06/2018"] 18.06pts +,
-    "000webhost": ["senha", "nome", "email", "03/2015"] 15.03tps +,
-    "8tracks": ["senha", "email", "06/2017"] 14.06pts +,
-}
-'''
