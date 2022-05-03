@@ -102,9 +102,16 @@ else:
     ordenado = sorted(pontosEmpresa.values(), reverse=True) #pegando os pontos e organizando eles de forma decrescente
     resultado = {} #dicionário vazio onde será armazenado a empresa e seus pontos, de forma já ordenada
     
+    #Guardando em um dict o nome da empresa e seu nome de forma ordenada
     for pontos in ordenado:
         for item in pontosEmpresa:
             if pontos == pontosEmpresa[item]:
                 resultado[item] = pontos
-                
-                
+    
+    #Mostrando no console a lista ordenada
+    print("LISTA ORDENADA")
+    print("---------------------------------------------------")
+    for item in resultado:
+        for empresa in empresas:
+            if item == empresa:
+                print(f"{item}: {empresas[empresa]}")
