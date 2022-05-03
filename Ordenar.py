@@ -8,7 +8,7 @@ ALUNOS
 -------------------------
 '''
 
-# pontos:       60          50         40     30      20      diferença tempo (+recente = +pontos)
+# pontos:       60          50         40     30      20      diferença tempo  (+recente = +pontos)
 # prioridade: senha > ajuda de senha > tel > nomes > email > data (mais recente para o mais antigo)
 
 empresas = {
@@ -110,6 +110,7 @@ else:
     
     #Mostrando no console a lista ordenada
     print("LISTA ORDENADA")
+    print("Empresa: dados vazados")
     print("---------------------------------------------------")
     for item in resultado:
         for empresa in empresas:
